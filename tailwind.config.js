@@ -8,6 +8,14 @@ module.exports = {
       fontFamily: {
         poppinsRegular: ["PoppinsRegular"],
         robotoRegular: ["RobotoRegular"]
+      },
+      colors: {
+        white: "#FFFFFF",
+        lightGray: "#F9FAFB",
+        black: "#111827",
+        gray: "#6B7280",
+        red: "#EF4444",
+        blue: "#3B82F6"
       }
     },
   },
