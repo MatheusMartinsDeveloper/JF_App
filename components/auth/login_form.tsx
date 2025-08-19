@@ -40,7 +40,7 @@ export default function LoginForm() {
                     <Text className="text-sm text-red-500 font-robotoRegular font-normal">Esqueci a senha</Text>
                 </View>
                 <View className="flex items-center w-full">
-                    <Link href={"/"} asChild>
+                    <Link href={"/home"} asChild>
                         <Pressable className="bg-red rounded-lg p-3 w-full">
                             <Text className="text-white text-base text-center font-poppinsRegular font-extrabold">    
                                 Entrar
@@ -50,7 +50,7 @@ export default function LoginForm() {
                 </View>
                 <View className="flex-row justify-center items-center gap-2 w-full">
                     <Text className="text-base font-robotoRegular font-normal">Não tem conta?</Text>
-                    <Link href={"/"} className="text-blue text-base font-robotoRegular font-bold">Cadastra-se</Link>
+                    <Link href={"/"} className="text-red text-base font-robotoRegular font-bold">Cadastra-se</Link>
                 </View>
             </View>
         </View>
