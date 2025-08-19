@@ -20,17 +20,25 @@ export default function LoginForm() {
             <View className="flex flex-col gap-5 w-full">
                 <View className="space-y-1 w-full">
                     <Text className="text-black text-base font-robotoRegular font-normal">Email</Text>
-                    <TextInput className="outline-none border-2 border-black rounded-lg p-4 w-full focus:border-red"></TextInput>
+                    <TextInput className="outline-none border-2 border-black rounded-lg p-4 w-full focus:border-red" /> 
                 </View>
                 <View className="space-y-1 w-full">
                     <Text className="text-black text-base font-robotoRegular font-normal">Senha</Text>
-                    <TextInput className="relative outline-none border-2 border-black rounded-lg p-4 w-full focus:border-red" secureTextEntry={!isVisible}></TextInput>
-                    <TouchableOpacity className="absolute right-3 top-10" onPress={changeVisible}>
-                        <Ionicons 
-                            size={20}
-                            name={isVisible ? `eye-off` : `eye`} 
+                    <View className="relative">
+                        <TextInput 
+                            className="outline-none border-2 border-black rounded-lg p-4 w-full focus:border-red"
+                            secureTextEntry={!isVisible} 
                         />
-                    </TouchableOpacity>
+                        <TouchableOpacity  
+                            className="absolute inset-y-0 right-3 justify-center" 
+                            onPress={changeVisible}
+                        >
+                            <Ionicons 
+                                size={20}
+                                name={isVisible ? `eye-off` : `eye`} 
+                            />
+                        </TouchableOpacity>
+                    </View>
                 </View>
                 <View className="flex-row justify-between items-center">
                     <View className="flex-row justify-center items-center gap-2">
