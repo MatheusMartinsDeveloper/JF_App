@@ -4,7 +4,7 @@ import AntDesign from '@expo/vector-icons/AntDesign';
 
 export default function Header() {
     return (
-        <View className="flex-row justify-between items-center pt-5 px-5 w-full">
+        <View className="flex-row justify-between items-center bg-white py-5 px-5 w-full">
             <View className="flex-row justify-start items-center gap-5 w-1/2">
                 <View className="bg-red rounded-full p-2">
                     <Image 
