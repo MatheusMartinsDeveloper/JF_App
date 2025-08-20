@@ -7,7 +7,11 @@ module.exports = {
     extend: {
       fontFamily: {
         poppinsRegular: ["PoppinsRegular"],
-        robotoRegular: ["RobotoRegular"]
+        poppinsMedium: ["PoppinsMedium"],
+        poppinsSemiBold: ["PoppinsSemiBold"],
+        robotoRegular: ["RobotoRegular"],
+        robotoMedium: ["RobotoMedium"],
+        robotoSemiBold: ["RobotoSemiBold"]
       },
       colors: {
         white: "#FFFFFF",
