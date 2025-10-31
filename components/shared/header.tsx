@@ -21,7 +21,7 @@ export default function Header() {
                 />
                 <View>
                     <AntDesign 
-                        name="shoppingcart"
+                        name="shopping-cart"
                         size={20}
                     />
                 </View>

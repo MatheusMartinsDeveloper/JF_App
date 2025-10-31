@@ -23,7 +23,7 @@ export default function TabsLayout() {
                 name="cart"
                 options={{
                     title: "Carrinho",
-                    tabBarIcon: ({ color }) => <AntDesign name="shoppingcart" color={color} size={20} />
+                    tabBarIcon: ({ color }) => <AntDesign name="shopping-cart" color={color} size={20} />
                 }}
             />
             <Tabs.Screen
