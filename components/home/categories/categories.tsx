@@ -6,7 +6,7 @@ export default function Categories() {
     return  (
         <View className="gap-5 pt-5 w-full">
             <View className="flex-row justify-between items-center w-full">
-                <Text className="text-black text-base font-robotoRegular">Categorias</Text>
+                <Text className="text-black text-xl font-poppinsMedium">Categorias</Text>
                 <Link href={`/`} asChild>
                     <TouchableOpacity>
                         <Text className="text-black text-base font-robotoMedium">Ver Todas</Text>
