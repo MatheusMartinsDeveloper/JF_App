@@ -1,9 +1,10 @@
-import { Stack, Text } from "tamagui";
+import { Stack } from "tamagui";
+import Header from "@/components/shared/Header";
 
 export default function Home() {
   return (
     <Stack>
-      <Text>Teste</Text>
+      <Header />
     </Stack>
   );
 }
