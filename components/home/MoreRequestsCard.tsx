@@ -1,7 +1,8 @@
 import { XStack, YStack, Card, Text, Image } from "tamagui";
 import { Link } from "expo-router";
+import { StarFull } from "@tamagui/lucide-icons";
 
-export default function Promotion() {
+export default function MoreRequestsCard() {
     return (
         <Link href={"/home"} asChild>
             <Card
@@ -10,8 +11,8 @@ export default function Promotion() {
                 shadowColor={"#000"}
                 shadowOpacity={0.20}
             >
-                <XStack 
-                    gap={15}
+                <XStack
+                    gap={10}
                 >
                     <Image
                         source={require("../../assets/images/categories/hamburguer_photo.png")}
@@ -19,7 +20,7 @@ export default function Promotion() {
                         height={60}
                         rounded={"$round"}
                     />
-                    <YStack 
+                    <YStack
                         gap={10}
                     >
                         <YStack>
@@ -28,7 +29,7 @@ export default function Promotion() {
                                 fontFamily={"$heading"}
                                 fontWeight={"$4"}
                                 fontSize={"$2"}
-                            >Combo Familia</Text>
+                            >XBacon Especial</Text>
                             <Text
                                 width={"90%"}
                                 color={"$color.gray700"}
@@ -39,20 +40,27 @@ export default function Promotion() {
                             >2 Lanches + Batata + 2 Refrigerantes</Text>
                         </YStack>
                         <XStack
+                            justify={"space-between"}
                             items={"center"}
-                            gap={10}
                         >
                             <Text
                                 color={"$color.gray900"}
                                 fontFamily={"$heading"}
                                 fontWeight={"$3"}
                                 fontSize={"$3"}
-                            >R$ 45,90</Text>
-                            <Text
-                                color={"$color.gray500"}
-                                fontFamily={"$body"}
-                                textDecorationLine="line-through"
-                            >R$ 55,90</Text>
+                            >R$ 18,90</Text>
+                            <XStack
+                                justify={"center"}
+                                items={"center"}
+                                gap={3}
+                            >
+                                <StarFull color={"$primary"} />
+                                <Text
+                                    color={"$color.gray900"}
+                                    fontFamily={"$heading"}
+                                    fontWeight={"$4"}
+                                >5</Text>
+                            </XStack>
                         </XStack>
                     </YStack>
                 </XStack>
