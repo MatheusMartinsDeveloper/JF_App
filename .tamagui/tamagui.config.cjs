@@ -31907,13 +31907,14 @@ var tokens2 = {
     primary: "#F15143",
     primaryLight: "#FF7B6B",
     primaryDark: "#B5362D",
+    backgroundOpacity: "rgba(239, 239, 239, 0.50)",
     // Secondary
     secondary: "#4CAEF0",
     secondaryLight: "#79C9FF",
     secondaryDark: "#1F7FBD",
     // Neutrals
     gray50: "#F8F8F8",
-    gray100: "#EFEFEF",
+    gray100: "#efefefff",
     gray200: "#DFDFDF",
     gray300: "#C8C8C8",
     gray400: "#A4A4A4",
