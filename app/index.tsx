@@ -1,5 +1,5 @@
 import { YStack, Text, Image, Stack } from "tamagui";
-import LoginCard from "@/components/auth/login_card";
+import LoginCard from "@/components/auth/LoginCard";
 
 export default function Login() {
     return (
