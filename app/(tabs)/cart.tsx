@@ -1,6 +1,7 @@
 import { ScrollView, Stack, YStack } from "tamagui";
 import Header from "@/components/shared/Header";
 import UserCart from "@/components/cart/UserCart";
+import AddItemCart from "@/components/cart/AddItemCart";
 
 export default function Cart() {
     return (
@@ -13,6 +14,7 @@ export default function Cart() {
                     gap={25}
                 >
                     <UserCart />
+                    <AddItemCart />
                 </YStack>
             </Stack>
         </ScrollView>
