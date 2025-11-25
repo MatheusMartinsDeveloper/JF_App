@@ -31908,6 +31908,7 @@ var tokens2 = {
     primaryLight: "#FF7B6B",
     primaryDark: "#B5362D",
     backgroundOpacity: "rgba(239, 239, 239, 0.50)",
+    backgroundOpacitySuccess: "rgba(62, 185, 128, 0.30)",
     // Secondary
     secondary: "#4CAEF0",
     secondaryLight: "#79C9FF",

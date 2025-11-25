@@ -1,0 +1,87 @@
+import { Card, XStack, YStack, Text, Image, Button } from "tamagui";
+import { MinusCircle, PlusCircle, Trash2} from "@tamagui/lucide-icons";
+
+export default function UserCartCard() {
+    return (
+        <Card
+            p={15}
+            elevation={5}
+            shadowColor={"#000"}
+            shadowOpacity={0.20}
+        >
+            <XStack
+                justify={"space-between"}
+                items={"center"}
+            >
+                <XStack
+                    items={"center"}
+                    gap={15}
+                >
+                    <Image 
+                        source={require("../../assets/images/categories/hamburguer_photo.png")} 
+                        width={60}
+                        height={60}
+                    />
+                    <YStack 
+                        gap={10}
+                    >
+                        <YStack>
+                            <Text
+                                color={"$gray900"}
+                                fontFamily={"$heading"}
+                                fontWeight={"$3"}
+                            >X-Bacon Especial</Text>
+                            <Text
+                                color={"$gray500"}
+                                fontFamily={"$body"}
+                            >Obs: Sem cebola</Text>
+                        </YStack>
+                        <XStack
+                            items={"center"}
+                            gap={15}
+                        >
+                            <Text
+                                color={"$success"}
+                                fontFamily={"$heading"}
+                                fontWeight={"$4"}
+                                fontSize={"$3"}
+                            >R$ 18,90</Text>
+                            <XStack
+                                items={"center"}
+                                gap={5}
+                            >
+                                <Button 
+                                    icon={MinusCircle}
+                                    bg={"$gray100"}
+                                    color={"$gray900"}
+                                    rounded={"$round"}
+                                    size={"$3"}
+                                ></Button>
+                                <Text
+                                    color={"$gray900"}
+                                    fontFamily={"$heading"}
+                                    fontWeight={"$4"}
+                                    fontSize={"$4"}
+                                >2</Text>
+                                <Button 
+                                    icon={PlusCircle}
+                                    bg={"$primary"}
+                                    color={"$gray50"}
+                                    rounded={"$round"}
+                                    size={"$3"}
+                                ></Button>
+                            </XStack>
+                        </XStack>
+                    </YStack>
+                </XStack>
+                <XStack>
+                    <Button 
+                        icon={Trash2} 
+                        color={"$primary"}
+                        size={"$5"}
+                    ></Button>
+                </XStack>
+            </XStack>
+        </Card>
+    );
+}
