@@ -43,7 +43,7 @@ export default function Promotion() {
                             gap={10}
                         >
                             <Text
-                                color={"$color.gray900"}
+                                color={"$success"}
                                 fontFamily={"$heading"}
                                 fontWeight={"$3"}
                                 fontSize={"$3"}

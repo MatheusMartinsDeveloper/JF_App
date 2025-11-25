@@ -44,7 +44,7 @@ export default function MoreRequestsCard() {
                             items={"center"}
                         >
                             <Text
-                                color={"$color.gray900"}
+                                color={"$success"}
                                 fontFamily={"$heading"}
                                 fontWeight={"$3"}
                                 fontSize={"$3"}
