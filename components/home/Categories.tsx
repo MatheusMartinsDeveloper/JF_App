@@ -20,28 +20,36 @@ export default function Categories() {
                     gap={10}
                 >
                     <Category 
-                        href={"/home"}
-                        image={"hamburguer"}
-                        text="Lanches"
+                        bgColor="$backgroundCard1"
+                        image={"lanches"}
+                        title="Lanches"
+                        imageWidth={100}
+                        imageHeight={100}
                     />
                     <Category 
-                        href={"/home"}
+                        bgColor="$backgroundCard2"
                         image={"porcoes"}
-                        text="Porções"
+                        title="Porções"
+                        imageWidth={100}
+                        imageHeight={70}
                     />
                 </XStack>
                 <XStack
                     gap={10}
                 >
                     <Category 
-                        href={"/home"}
+                        bgColor="$backgroundCard3"
                         image={"sobremesas"}
-                        text="Sobremesas"
+                        title="Sobremesas"
+                        imageWidth={100}
+                        imageHeight={60}
                     />
                     <Category 
-                        href={"/home"}
-                        image={"bebidas"}
-                        text="Bebidas"
+                        bgColor="$backgroundCard4"
+                        image={"refrigerantes"}
+                        title="Bebidas"
+                        imageWidth={100}
+                        imageHeight={70}
                     />
                 </XStack>
             </YStack>

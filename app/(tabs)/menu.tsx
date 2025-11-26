@@ -1,9 +1,20 @@
-import { Stack, Text } from "tamagui";
+import { ScrollView, Stack, YStack } from "tamagui";
+import Header from "@/components/shared/Header";
+import CategoriesMenu from "@/components/menu/CategoriesMenu";
 
 export default function Menu() {
     return (
-        <Stack>
-            <Text>Menu</Text>
-        </Stack>
+        <ScrollView>
+            <Stack pb={20}>
+                <Header />
+                <YStack
+                    justify={"center"}
+                    items={"center"}
+                    gap={25}
+                >
+                    <CategoriesMenu />
+                </YStack>
+            </Stack>
+        </ScrollView>
     );
 }

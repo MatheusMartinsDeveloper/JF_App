@@ -1,37 +1,51 @@
-import { Card, Text, Image } from "tamagui";
+import { Card, View, Text, Image, ColorTokens } from "tamagui";
 import { Link } from "expo-router";
 import { categoriesMap } from "@/constants/categories/CategoriesMap";
 
 type CategoryKey = keyof typeof categoriesMap;
 
 type CategoryProps = {
+    bgColor: ColorTokens;
+    title: string,
     image: CategoryKey,
-    text: string,
-    href: any
+    imageWidth: number,
+    imageHeight: number
 }
 
-export default function Category({ image, text, href }: CategoryProps) {
+export default function Category({ bgColor, title, image, imageWidth, imageHeight }: CategoryProps) {
     return (
-        <Link href={href} asChild>
-            <Card
-                width={"50%"}
-                p={15}
-                elevation={5}
-                shadowColor={"#000"}
-                shadowOpacity={0.20}
-            >
-                <Image
-                    source={categoriesMap[image]}
-                    width={60}
-                    height={60}
-                    rounded={9999}
-                />
-                <Text
-                    color={"$color.gray900"}
-                    fontFamily={"$body"}
-                    fontWeight={"$2"}
-                >{text}</Text>
-            </Card>
-        </Link>
+        <Link href={"/"} asChild>
+                    <Card
+                        width={"50%"}
+                        height={125}
+                        p={10}
+                        elevation={5}
+                        shadowColor={"#000"}
+                        shadowOpacity={0.20}
+                        overflow="hidden"
+                        position="relative"
+                        bg={bgColor}
+                    >
+                            <Text 
+                                color={"$gray100"}
+                                fontFamily={"$heading"}
+                                fontWeight={"$3"}
+                                z={10}
+                            >{title}</Text>
+                            <View
+                                style={{
+                                    position: "absolute",
+                                    right: 10,
+                                    bottom: 5
+                                }}
+                            >
+                                <Image
+                                    source={categoriesMap[image]}
+                                    width={imageWidth}
+                                    height={imageHeight}
+                                />
+                            </View>
+                    </Card>
+                </Link>
     );
 }

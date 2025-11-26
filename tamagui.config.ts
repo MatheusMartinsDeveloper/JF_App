@@ -79,6 +79,18 @@ export const tokens = {
     backgroundOpacity: "rgba(239, 239, 239, 0.50)",
     backgroundOpacitySuccess: 'rgba(62, 185, 128, 0.30)',
 
+    backgroundCard1: "#8A1F10",
+    backgroundCard2: "#7A4A24",
+    backgroundCard3: "#5A3A7A",
+    backgroundCard4: "#28405A",
+    backgroundCard5: "#8A5E1A",
+    backgroundCard6: "#6A4A3A",
+    backgroundCard7: "#2F5A47",
+    backgroundCard8: "#8A4A24",
+    backgroundCard9: "#5A3A24",
+    backgroundCard10: "#5A1F35",
+
+
     // Secondary
     secondary: '#4CAEF0',
     secondaryLight: '#79C9FF',
