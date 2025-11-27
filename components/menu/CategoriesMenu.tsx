@@ -1,5 +1,6 @@
 import { YStack, XStack, Text } from "tamagui";
 import CategoriesMenuCard from "./CategoriesMenuCard";
+import { ProductsData } from "@/constants/categories/ProductsData";
 
 export default function CategoriesMenu() {
     return (
@@ -13,100 +14,23 @@ export default function CategoriesMenu() {
                 fontWeight={"$4"}
                 fontSize={"$5"}
             >Categorias</Text>
-            <YStack
+            <XStack
+                flexWrap="wrap"
+                justify={"space-between"}
                 gap={10}
             >
-                <XStack
-                    gap={10}
-                >
+                {ProductsData.map(item => (
                     <CategoriesMenuCard 
-                        bgColor="$backgroundCard1" 
-                        title="Lanches" 
-                        image="lanches"
-                        imageWidth={100}
-                        imageHeight={100}
+                        key={item.id}
+                        id={item.id}
+                        title={item.title}
+                        bgColor={item.color}
+                        image={item.image}
+                        imageWidth={item.imageWidth}
+                        imageHeight={item.imageHeight}
                     />
-                    <CategoriesMenuCard 
-                        bgColor="$backgroundCard2" 
-                        title="Porções" 
-                        image="porcoes"
-                        imageWidth={100}
-                        imageHeight={70}
-                    />
-                </XStack>
-                <XStack
-                    gap={10}
-                >
-                    <CategoriesMenuCard 
-                        bgColor="$backgroundCard3" 
-                        title="Sobremesas" 
-                        image="sobremesas"
-                        imageWidth={100}
-                        imageHeight={60}
-                    />
-                    <CategoriesMenuCard 
-                        bgColor="$backgroundCard4" 
-                        title="Refrigerantes" 
-                        image="refrigerantes"
-                        imageWidth={100}
-                        imageHeight={70}
-                    />
-                </XStack>
-                <XStack
-                    gap={10}
-                >
-                    <CategoriesMenuCard 
-                        bgColor="$backgroundCard5" 
-                        title="Batata no Pote" 
-                        image="batataPote"
-                        imageWidth={100}
-                        imageHeight={60}
-                    />
-                    <CategoriesMenuCard 
-                        bgColor="$backgroundCard6" 
-                        title="Caldos" 
-                        image="caldos"
-                        imageWidth={100}
-                        imageHeight={60}
-                    />
-                </XStack>
-                <XStack
-                    gap={10}
-                >
-                    <CategoriesMenuCard 
-                        bgColor="$backgroundCard7" 
-                        title="Sucos" 
-                        image="sucos"
-                        imageWidth={100}
-                        imageHeight={80}
-                    />
-                    <CategoriesMenuCard 
-                        bgColor="$backgroundCard8" 
-                        title="salgadinho" 
-                        image="salgadinhos"
-                        imageWidth={105}
-                        imageHeight={70}
-                    />
-                </XStack>
-                <XStack
-                    gap={10}
-                >
-                    <CategoriesMenuCard 
-                        bgColor="$backgroundCard9" 
-                        title="Cervejas" 
-                        image="cervejas"
-                        imageWidth={100}
-                        imageHeight={80}
-                    />
-                    <CategoriesMenuCard 
-                        bgColor="$backgroundCard10" 
-                        title="Destilados e Vinhos" 
-                        image="destiladosVinhos"
-                        imageWidth={100}
-                        imageHeight={70}
-                    />
-                </XStack>
-            </YStack>
+                ))}
+            </XStack>
         </YStack>
     );
 }
