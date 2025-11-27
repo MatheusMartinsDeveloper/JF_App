@@ -13,13 +13,20 @@ export default function Login() {
                 items={"center"}
                 gap={20}
             >
-                <Image 
-                    source={require("../assets/images/jf_logo.png")}
-                    height={150}
-                    width={150}
-                    borderRadius={"$round"}
+                <Stack
                     bg={"$background"}
-                />
+                    borderTopLeftRadius={"$round"}
+                    borderTopRightRadius={"$round"}
+                    borderBottomLeftRadius={"$round"}
+                    borderBottomRightRadius={"$round"}
+                    p={15}
+                >
+                    <Image 
+                        source={require("../assets/images/jf_logo.png")}
+                        height={150}
+                        width={150}
+                    />
+                </Stack>
                 <Text 
                     color={"$color.gray50"}
                     fontSize={24}

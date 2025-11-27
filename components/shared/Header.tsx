@@ -6,22 +6,23 @@ export default function Header() {
         <XStack
             justify={"space-between"}
             items={"center"}
-            pt={10}
+            pt={20}
+            pl={20}
         >
             <XStack
                 items={"center"}
             >
                 <Image
                     source={require("../../assets/images/jf_logo.png")}
-                    width={70}
-                    height={70}
+                    width={60}
+                    height={60}
                 />
                 <Text
                     color={"$gray900"}
                     fontFamily={"$heading"}
                     fontSize={"$3"}
                     fontWeight={"$4"}
-                >JF Lanches</Text>
+                >JF Delivery</Text>
             </XStack>
             <XStack
                 gap={15}
