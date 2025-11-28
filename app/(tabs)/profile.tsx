@@ -9,8 +9,8 @@ export default function Profile() {
             <Stack pb={20}>
                 <Header />
                 <YStack
-                    justify={"center"}
-                    items={"center"}
+                    justifyContent={"center"}
+                    alignItems={"center"}
                     gap={25}
                 >
                     <LatestOrders />

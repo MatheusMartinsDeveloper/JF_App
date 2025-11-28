@@ -1,4 +1,4 @@
-import { defaultConfig } from '@tamagui/config/v4';
+import { config as defaultConfig } from '@tamagui/config';
 import { createTamagui, createFont } from 'tamagui';
 
 const interFont = createFont({
@@ -194,18 +194,21 @@ export const themes = {
 
 export const tamaguiConfig = createTamagui({
   ...defaultConfig,
+
   tokens: {
     ...defaultConfig.tokens,
-    ...tokens
+    ...tokens,
   },
+
   fonts: {
     ...defaultConfig.fonts,
     body: interFont,
-    heading: poppinsFont
+    heading: poppinsFont,
   },
+
   themes: {
     ...defaultConfig.themes,
-    ...themes
+    ...themes,
   },
 });
 

@@ -22129,6 +22129,7 @@ var stylePropsView = {
   touchAction: true,
   transformStyle: true,
   userSelect: true,
+  willChange: true,
   ...isAndroid ? {
     elevationAndroid: true
   } : {}
@@ -24982,7 +24983,14 @@ var SheetImplementationCustom = import_react28.default.forwardRef(function(props
   })(), [isShowingInnerSheet, setIsShowingInnerSheet] = import_react28.default.useState(false), shouldHideParentSheet = !isWeb && modal && isShowingInnerSheet && // if not using weird portal limitation we dont need to hide parent sheet
   USE_NATIVE_PORTAL3, sheetInsideSheet = import_react28.default.useContext(SheetInsideSheetContext), onInnerSheet = import_react28.default.useCallback((hasChild) => {
     setIsShowingInnerSheet(hasChild);
-  }, []), positions = import_react28.default.useMemo(() => snapPoints.map((point) => getYPositions(snapPointsMode, point, screenSize, frameSize)), [screenSize, frameSize, snapPoints, snapPointsMode]), {
+  }, []), stableFrameSize = import_react28.default.useRef(frameSize);
+  import_react28.default.useEffect(() => {
+    open && frameSize && (stableFrameSize.current = frameSize);
+  }, [open, frameSize]);
+  const positions = import_react28.default.useMemo(() => snapPoints.map((point) => (
+    // FIX: Use stable frameSize when closing to prevent position jumps
+    getYPositions(snapPointsMode, point, screenSize, open ? frameSize : stableFrameSize.current)
+  )), [screenSize, frameSize, snapPoints, snapPointsMode, open]), {
     useAnimatedNumber,
     useAnimatedNumberStyle,
     useAnimatedNumberReaction
@@ -25098,9 +25106,10 @@ var SheetImplementationCustom = import_react28.default.forwardRef(function(props
       onPanResponderRelease: finish
     });
   }, [disableDrag, isShowingInnerSheet, animateTo, frameSize, positions, setPosition]), handleAnimationViewLayout = import_react28.default.useCallback((e) => {
+    if (!open && stableFrameSize.current !== 0) return;
     const next = Math.min(e.nativeEvent?.layout.height, import_react_native_web.Dimensions.get(relativeDimensionTo).height);
     next && setFrameSize(next);
-  }, []), handleMaxContentViewLayout = import_react28.default.useCallback((e) => {
+  }, [open]), handleMaxContentViewLayout = import_react28.default.useCallback((e) => {
     const next = Math.min(e.nativeEvent?.layout.height, import_react_native_web.Dimensions.get(relativeDimensionTo).height);
     next && setMaxContentSize(next);
   }, []), animatedStyle = useAnimatedNumberStyle(animatedNumber, (val) => {
@@ -25442,24 +25451,31 @@ function createSheet({
       frameSize,
       contentRef,
       open
-    } = context2, composedContentRef = useComposedRefs(forwardedRef, contentRef), offscreenSize = useSheetOffscreenSize(context2), sheetContents = (0, import_react30.useMemo)(() => (
-      // @ts-expect-error
-      /* @__PURE__ */ (0, import_jsx_runtime24.jsxs)(Frame2, {
-        ref: composedContentRef,
-        flex: hasFit ? 0 : 1,
-        height: hasFit ? void 0 : frameSize,
-        pointerEvents: open ? "auto" : "none",
-        ...props,
-        children: [/* @__PURE__ */ (0, import_jsx_runtime24.jsx)(StackZIndexContext, {
-          zIndex: resolveViewZIndex3(props.zIndex),
-          children
-        }), adjustPaddingForOffscreenContent && /* @__PURE__ */ (0, import_jsx_runtime24.jsx)(import_core11.Stack, {
-          "data-sheet-offscreen-pad": true,
-          height: offscreenSize,
-          width: "100%"
-        })]
-      })
-    ), [open, props, frameSize, offscreenSize, adjustPaddingForOffscreenContent, hasFit]);
+    } = context2, composedContentRef = useComposedRefs(forwardedRef, contentRef), offscreenSize = useSheetOffscreenSize(context2), stableFrameSize = (0, import_react30.useRef)(frameSize);
+    (0, import_react30.useEffect)(() => {
+      open && frameSize && (stableFrameSize.current = frameSize);
+    }, [open, frameSize]);
+    const sheetContents = (0, import_react30.useMemo)(() => {
+      const shouldUseFixedHeight = hasFit && !open && stableFrameSize.current;
+      return (
+        // @ts-expect-error
+        /* @__PURE__ */ (0, import_jsx_runtime24.jsxs)(Frame2, {
+          ref: composedContentRef,
+          flex: hasFit && open ? 0 : 1,
+          height: shouldUseFixedHeight ? stableFrameSize.current : hasFit ? void 0 : frameSize,
+          pointerEvents: open ? "auto" : "none",
+          ...props,
+          children: [/* @__PURE__ */ (0, import_jsx_runtime24.jsx)(StackZIndexContext, {
+            zIndex: resolveViewZIndex3(props.zIndex),
+            children
+          }), adjustPaddingForOffscreenContent && /* @__PURE__ */ (0, import_jsx_runtime24.jsx)(import_core11.Stack, {
+            "data-sheet-offscreen-pad": true,
+            height: offscreenSize,
+            width: "100%"
+          })]
+        })
+      );
+    }, [open, props, frameSize, offscreenSize, adjustPaddingForOffscreenContent, hasFit]);
     return /* @__PURE__ */ (0, import_jsx_runtime24.jsxs)(import_jsx_runtime24.Fragment, {
       children: [/* @__PURE__ */ (0, import_jsx_runtime24.jsx)(RemoveScroll, {
         enabled: removeScrollEnabled && context2.open,
@@ -25729,7 +25745,9 @@ var DialogPortalFrame = (0, import_core14.styled)(YStack, {
           height: "auto",
           // ensure always in frame and right height
           maxHeight: "100vh",
-          position: "fixed"
+          position: "fixed",
+          // ensure dialog inherits stacking context from portal wrapper
+          zIndex: 1
         }
       }
     }
@@ -25771,7 +25789,7 @@ var DialogPortal = React38.forwardRef((props, forwardRef26) => {
   } = props, dialogRef = React38.useRef(null), ref = composeRefs(dialogRef, forwardRef26), context2 = useDialogContext(scope), isMountedOrOpen = forceMount || context2.open, [isFullyHidden, setIsFullyHidden] = React38.useState(!isMountedOrOpen), isAdapted = useAdaptIsActive(context2.adaptScope), isVisible = isMountedOrOpen ? true : !isFullyHidden;
   isMountedOrOpen && isFullyHidden && setIsFullyHidden(false), isWeb && useIsomorphicLayoutEffect(() => {
     const node = dialogRef.current;
-    node instanceof HTMLDialogElement && (isVisible ? node.show() : node.close());
+    node instanceof HTMLDialogElement && (isVisible ? node.show?.() : node.close?.());
   }, [isVisible]);
   const handleExitComplete = React38.useCallback(() => {
     setIsFullyHidden(true);
@@ -26228,6 +26246,7 @@ var AlertDialogContent = React39.forwardRef(function(props, forwardedRef) {
       cancelRef,
       children: /* @__PURE__ */ (0, import_jsx_runtime28.jsxs)(DialogContent, {
         role: "alertdialog",
+        "aria-modal": true,
         scope: dialogScope,
         ...contentProps,
         ref: composedRefs,
@@ -26464,10 +26483,10 @@ var AvatarImage = React41.forwardRef((props, forwardedRef) => {
     }
   )?.width);
   return React41.useEffect(() => {
-    setStatus("idle");
+    setStatus(src ? "idle" : "error");
   }, [JSON.stringify(src)]), React41.useEffect(() => {
     onLoadingStatusChange(status), context2.onImageLoadingStatusChange(status);
-  }, [status]), /* @__PURE__ */ (0, import_jsx_runtime30.jsx)(YStack, {
+  }, [status]), src ? /* @__PURE__ */ (0, import_jsx_runtime30.jsx)(YStack, {
     fullscreen: true,
     zIndex: 1,
     children: /* @__PURE__ */ (0, import_jsx_runtime30.jsx)(Image, {
@@ -26486,7 +26505,7 @@ var AvatarImage = React41.forwardRef((props, forwardedRef) => {
         setStatus("loaded");
       }, "onLoad")
     })
-  });
+  }) : null;
 });
 AvatarImage.displayName = IMAGE_NAME;
 var FALLBACK_NAME = "AvatarFallback";
@@ -26610,6 +26629,8 @@ var ButtonFrame = (0, import_web14.styled)(ThemeableStack, {
   context: ButtonContext,
   role: "button",
   focusable: true,
+  // forces runtime pressStyle so it passes through context text colors
+  disableClassName: true,
   variants: {
     unstyled: {
       false: {
@@ -32177,7 +32198,7 @@ var PopoverTrigger = React60.forwardRef(function(props, forwardedRef) {
       virtualRef
     },
     scope,
-    asChild: rest.asChild,
+    asChild: true,
     children: trigger
   });
 });
@@ -38754,16 +38775,6 @@ var DefaultTabsTabFrame = (0, import_core48.styled)(ThemeableStack, {
     disabled: {
       true: {
         pointerEvents: "none"
-      }
-    },
-    active: {
-      true: {
-        hoverStyle: {
-          backgroundColor: "$background"
-        },
-        focusStyle: {
-          backgroundColor: "$background"
-        }
       }
     },
     unstyled: {

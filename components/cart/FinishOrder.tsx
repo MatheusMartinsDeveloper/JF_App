@@ -23,8 +23,8 @@ export default function FinishOrder() {
                     gap={10}
                 >
                     <XStack
-                        justify={"space-between"}
-                        items={"center"}
+                        justifyContent={"space-between"}
+                        alignItems={"center"}
                     >
                         <Text
                             color={"$gray500"}
@@ -39,8 +39,8 @@ export default function FinishOrder() {
                         >R$ 60,50</Text>
                     </XStack>
                     <XStack
-                        justify={"space-between"}
-                        items={"center"}
+                        justifyContent={"space-between"}
+                        alignItems={"center"}
                     >
                         <Text
                             color={"$gray500"}
@@ -56,8 +56,8 @@ export default function FinishOrder() {
                     </XStack>
                     <Separator />
                     <XStack
-                        justify={"space-between"}
-                        items={"center"}
+                        justifyContent={"space-between"}
+                        alignItems={"center"}
                     >
                         <Text
                             color={"$gray900"}

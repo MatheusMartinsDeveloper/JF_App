@@ -3,14 +3,14 @@ export const ProductsData = [
     {
         id: 1,
         title: "Lanches",
-        image: require("../../assets/images/categories/card/canvas.png"),
+        image: require("../../assets/images/categories/card/snacks/snack_1.png"),
         imageWidth: 100,
         imageHeight: 100,
         color: "$backgroundCard1",
         products: [
             {
                 id: 1,
-                imageCard: require("../../assets/images/categories/card/canvas.png"),
+                imageCard: require("../../assets/images/categories/card/snacks/snack_1.png"),
                 imagesDetails: [
                     {
                         id: 1,
@@ -25,7 +25,7 @@ export const ProductsData = [
             },
             {
                 id: 2,
-                imageCard: require("../../assets/images/categories/card/canvas.png"),
+                imageCard: require("../../assets/images/categories/card/snacks/snack_2.png"),
                 imagesDetails: [
                     {
                         id: 1,
@@ -40,7 +40,7 @@ export const ProductsData = [
             },
             {
                 id: 3,
-                imageCard: require("../../assets/images/categories/card/canvas.png"),
+                imageCard: require("../../assets/images/categories/card/snacks/snack_3.png"),
                 imagesDetails: [
                     {
                         id: 1,
@@ -55,7 +55,7 @@ export const ProductsData = [
             },
             {
                 id: 4,
-                imageCard: require("../../assets/images/categories/card/canvas.png"),
+                imageCard: require("../../assets/images/categories/card/snacks/snack_4.png"),
                 imagesDetails: [
                     {
                         id: 1,
@@ -70,7 +70,7 @@ export const ProductsData = [
             },
             {
                 id: 5,
-                imageCard: require("../../assets/images/categories/card/canvas.png"),
+                imageCard: require("../../assets/images/categories/card/snacks/snack_5.png"),
                 imagesDetails: [
                     {
                         id: 1,
@@ -85,7 +85,7 @@ export const ProductsData = [
             },
             {
                 id: 6,
-                imageCard: require("../../assets/images/categories/card/canvas.png"),
+                imageCard: require("../../assets/images/categories/card/snacks/snack_6.png"),
                 imagesDetails: [
                     {
                         id: 1,

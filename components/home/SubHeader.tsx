@@ -3,12 +3,12 @@ import { Text, XStack, YStack } from "tamagui";
 export default function SubHeader() {
     return (
         <YStack
-            justify={"center"}
+            justifyContent={"center"}
             gap={10}
             width={"90%"}
             height={140}
             p={25}
-            bg={"$primary"}
+            bg={"$color.primary"}
             borderBottomLeftRadius={"$4"}
             borderBottomRightRadius={"$4"}
         >

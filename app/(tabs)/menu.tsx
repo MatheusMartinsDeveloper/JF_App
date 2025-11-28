@@ -8,8 +8,8 @@ export default function Menu() {
             <Stack pb={20}>
                 <Header />
                 <YStack
-                    justify={"center"}
-                    items={"center"}
+                    justifyContent={"center"}
+                    alignItems={"center"}
                     gap={25}
                 >
                     <CategoriesMenu />

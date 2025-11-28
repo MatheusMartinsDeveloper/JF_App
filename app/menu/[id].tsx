@@ -1,7 +1,7 @@
-import { YStack, XStack, Text, Button } from "tamagui";
-import { useLocalSearchParams } from "expo-router";
+import { YStack, XStack, Button } from "tamagui";
+import Products from "@/components/menu/Products/Products";
+import { useLocalSearchParams, Link } from "expo-router";
 import { ProductsData } from "@/constants/categories/ProductsData";
-import { Link } from "expo-router";
 import { ArrowLeft, Search, ShoppingCart } from "@tamagui/lucide-icons";
 
 export default function Category() {
@@ -13,8 +13,8 @@ export default function Category() {
     return (
         <YStack p={20}>
             <XStack
-                justify={"space-between"}
-                items={"center"}
+                justifyContent={"space-between"}
+                alignItems={"center"}
             >
                 <Link href={"/(tabs)/menu"} asChild>
                     <Button 
@@ -48,6 +48,9 @@ export default function Category() {
                     ></Button>
                 </XStack>
             </XStack>
+            <Products 
+                category={category}
+            />
         </YStack>
     );
 }

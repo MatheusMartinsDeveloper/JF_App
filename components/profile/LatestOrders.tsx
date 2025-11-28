@@ -9,8 +9,8 @@ export default function LatestOrders() {
             width={"90%"}
         >
             <XStack
-                justify={"space-between"}
-                items={"center"}
+                justifyContent={"space-between"}
+                alignItems={"center"}
             >
                 <Text
                     color={"$gray900"}

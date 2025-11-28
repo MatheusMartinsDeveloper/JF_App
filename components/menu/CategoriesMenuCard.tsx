@@ -1,16 +1,8 @@
-import { Card, View, Text, Image, ColorTokens } from "tamagui";
+import { Card, View, Text, Image } from "tamagui";
 import { Link } from "expo-router";
+import { CategoryType } from "@/types/CategoryType";
 
-type CategoriesMenuCardProps = {
-    id: number,
-    title: string,
-    bgColor: ColorTokens | any;
-    image: any,
-    imageWidth?: number,
-    imageHeight?: number,
-}
-
-export default function CategoriesMenuCard({ id, title, bgColor, image, imageWidth, imageHeight }: CategoriesMenuCardProps) {
+export default function CategoriesMenuCard({ id, title, color, image, imageWidth, imageHeight }: CategoryType) {
     return (
         <Link href={`/menu/${id}`} asChild>
             <Card
@@ -22,13 +14,13 @@ export default function CategoriesMenuCard({ id, title, bgColor, image, imageWid
                 shadowOpacity={0.20}
                 overflow="hidden"
                 position="relative"
-                bg={bgColor}
+                bg={color}
             >
                 <Text 
                     color={"$gray100"}
                     fontFamily={"$heading"}
                     fontWeight={"$3"}
-                    z={10}
+                    zIndex={10}
                 >{title}</Text>
                 <View
                     style={{

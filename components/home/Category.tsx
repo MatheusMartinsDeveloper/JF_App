@@ -30,7 +30,7 @@ export default function Category({ bgColor, title, image, imageWidth, imageHeigh
                                 color={"$gray100"}
                                 fontFamily={"$heading"}
                                 fontWeight={"$3"}
-                                z={10}
+                                zIndex={10}
                             >{title}</Text>
                             <View
                                 style={{

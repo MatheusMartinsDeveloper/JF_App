@@ -5,12 +5,12 @@ export default function Login() {
     return (
         <YStack gap={50}>
             <YStack
-                bg={"$primary"} 
+                bg={"$color.primary"}
                 height={300} 
                 borderBottomLeftRadius={120}
                 borderBottomRightRadius={120}
-                justify={"center"}
-                items={"center"}
+                justifyContent={"center"}
+                alignItems={"center"}
                 gap={20}
             >
                 <Stack
@@ -28,7 +28,7 @@ export default function Login() {
                     />
                 </Stack>
                 <Text 
-                    color={"$color.gray50"}
+                    color={"$gray50"}
                     fontSize={24}
                     fontWeight={"$4"}
                     fontFamily={"$heading"}
@@ -37,8 +37,8 @@ export default function Login() {
                 </Text>
             </YStack>
             <Stack 
-                justify={"center"} 
-                items={"center"}
+                justifyContent={"center"} 
+                alignItems={"center"}
             >
                 <LoginCard />       
             </Stack>

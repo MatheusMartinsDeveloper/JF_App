@@ -12,8 +12,8 @@ export default function DeliveryButton() {
                 shadowOpacity={0.20}
             >
                 <XStack
-                    justify={"space-between"}
-                    items={"center"}
+                    justifyContent={"space-between"}
+                    alignItems={"center"}
                 >
                     <YStack>
                         <Text

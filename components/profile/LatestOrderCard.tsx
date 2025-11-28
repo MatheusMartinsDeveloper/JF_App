@@ -10,14 +10,14 @@ export default function LatestOrderCard() {
             shadowOpacity={0.20}
         >
             <XStack
-                justify={"space-between"}
-                items={"center"}
+                justifyContent={"space-between"}
+                alignItems={"center"}
             >
                 <YStack
                     gap={5}
                 >
                     <XStack
-                        items={"center"}
+                        alignItems={"center"}
                         gap={10}
                     >
                         <Text

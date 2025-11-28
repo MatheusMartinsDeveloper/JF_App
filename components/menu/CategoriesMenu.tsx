@@ -16,7 +16,7 @@ export default function CategoriesMenu() {
             >Categorias</Text>
             <XStack
                 flexWrap="wrap"
-                justify={"space-between"}
+                justifyContent={"space-between"}
                 gap={10}
             >
                 {ProductsData.map(item => (
@@ -24,7 +24,7 @@ export default function CategoriesMenu() {
                         key={item.id}
                         id={item.id}
                         title={item.title}
-                        bgColor={item.color}
+                        color={item.color}
                         image={item.image}
                         imageWidth={item.imageWidth}
                         imageHeight={item.imageHeight}

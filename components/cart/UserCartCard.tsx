@@ -10,11 +10,11 @@ export default function UserCartCard() {
             shadowOpacity={0.20}
         >
             <XStack
-                justify={"space-between"}
-                items={"center"}
+                justifyContent={"space-between"}
+                alignItems={"center"}
             >
                 <XStack
-                    items={"center"}
+                    alignItems={"center"}
                     gap={15}
                 >
                     <Image 
@@ -37,7 +37,7 @@ export default function UserCartCard() {
                             >Obs: Sem cebola</Text>
                         </YStack>
                         <XStack
-                            items={"center"}
+                            alignItems={"center"}
                             gap={15}
                         >
                             <Text
@@ -47,14 +47,14 @@ export default function UserCartCard() {
                                 fontSize={"$3"}
                             >R$ 18,90</Text>
                             <XStack
-                                items={"center"}
+                                alignItems={"center"}
                                 gap={5}
                             >
                                 <Button 
                                     icon={MinusCircle}
                                     bg={"$gray100"}
                                     color={"$gray900"}
-                                    rounded={"$round"}
+                                    borderRadius={"$round"}
                                     size={"$3"}
                                 ></Button>
                                 <Text
@@ -67,7 +67,7 @@ export default function UserCartCard() {
                                     icon={PlusCircle}
                                     bg={"$primary"}
                                     color={"$gray50"}
-                                    rounded={"$round"}
+                                    borderRadius={"$round"}
                                     size={"$3"}
                                 ></Button>
                             </XStack>

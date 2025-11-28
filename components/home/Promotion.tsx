@@ -17,7 +17,7 @@ export default function Promotion() {
                         source={require("../../assets/images/categories/hamburguer_photo.png")}
                         width={60}
                         height={60}
-                        rounded={"$round"}
+                        borderRadius={"$round"}
                     />
                     <YStack 
                         gap={10}
@@ -39,7 +39,7 @@ export default function Promotion() {
                             >2 Lanches + Batata + 2 Refrigerantes</Text>
                         </YStack>
                         <XStack
-                            items={"center"}
+                            alignItems={"center"}
                             gap={10}
                         >
                             <Text

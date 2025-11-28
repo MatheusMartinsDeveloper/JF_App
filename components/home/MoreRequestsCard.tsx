@@ -18,7 +18,7 @@ export default function MoreRequestsCard() {
                         source={require("../../assets/images/categories/hamburguer_photo.png")}
                         width={60}
                         height={60}
-                        rounded={"$round"}
+                        borderRadius={"$round"}
                     />
                     <YStack
                         gap={10}
@@ -40,8 +40,8 @@ export default function MoreRequestsCard() {
                             >2 Lanches + Batata + 2 Refrigerantes</Text>
                         </YStack>
                         <XStack
-                            justify={"space-between"}
-                            items={"center"}
+                            justifyContent={"space-between"}
+                            alignItems={"center"}
                         >
                             <Text
                                 color={"$success"}
@@ -50,8 +50,8 @@ export default function MoreRequestsCard() {
                                 fontSize={"$3"}
                             >R$ 18,90</Text>
                             <XStack
-                                justify={"center"}
-                                items={"center"}
+                                justifyContent={"center"}
+                                alignItems={"center"}
                                 gap={3}
                             >
                                 <StarFull color={"$primary"} />

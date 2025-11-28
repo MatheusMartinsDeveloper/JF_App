@@ -5,7 +5,7 @@ import { Pressable } from "react-native";
 export default function LoginCard() {
     return (
         <Card 
-            items={"center"}
+            alignItems={"center"}
             gap={10}
             width={"90%"}
             py={25}
@@ -64,13 +64,13 @@ export default function LoginCard() {
                     </YStack>
                 </YStack>
                 <XStack 
-                    justify={"space-between"}
-                    items={"center"}
+                    justifyContent={"space-between"}
+                    alignItems={"center"}
                     width={"100%"}
                     py={5}
                 >
                     <XStack
-                        items={"center"}
+                        alignItems={"center"}
                         gap={10}
                     >
                         <Checkbox id="remember" />
@@ -109,8 +109,8 @@ export default function LoginCard() {
                     </Link>
                 </Stack>
                 <XStack 
-                    justify={"center"}
-                    items={"center"}
+                    justifyContent={"center"}
+                    alignItems={"center"}
                     gap={10}
                     pt={10}
                 >

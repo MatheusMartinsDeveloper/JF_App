@@ -4,13 +4,13 @@ import { Search, ShoppingCart } from "@tamagui/lucide-icons";
 export default function Header() {
     return (
         <XStack
-            justify={"space-between"}
-            items={"center"}
+            justifyContent={"space-between"}
+            alignItems={"center"}
             pt={20}
             pl={20}
         >
             <XStack
-                items={"center"}
+                alignItems={"center"}
             >
                 <Image
                     source={require("../../assets/images/jf_logo.png")}

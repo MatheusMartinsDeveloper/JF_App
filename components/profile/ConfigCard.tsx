@@ -18,11 +18,11 @@ export default function ConfigCard({ icon: IconComponent, title, description }: 
                 shadowOpacity={0.20}
             >
                 <XStack
-                    justify={"space-between"}
-                    items={"center"}
+                    justifyContent={"space-between"}
+                    alignItems={"center"}
                 >
                     <XStack
-                        items={"center"}
+                        alignItems={"center"}
                         gap={10}
                     >
                         <IconComponent />
