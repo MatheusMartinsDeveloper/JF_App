@@ -27,6 +27,7 @@ export default function Products({ category }: any) {
                         getProducts.map((item: any) => (
                             <ProductCard
                                 key={item.id}
+                                id={item.id}
                                 image={item.imageCard}
                                 name={item.name}
                                 price={item.price}

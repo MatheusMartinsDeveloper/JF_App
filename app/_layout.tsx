@@ -3,6 +3,7 @@ import { Stack } from 'expo-router';
 import { useFonts } from "expo-font";
 import { TamaguiProvider } from 'tamagui';
 import { tamaguiConfig } from '../tamagui.config';
+import { SafeAreaProvider } from 'react-native-safe-area-context';
 
 export default function RootLayout() {
   const [loaded] = useFonts({
@@ -19,10 +20,12 @@ export default function RootLayout() {
   }
 
   return (
-    <TamaguiProvider config={tamaguiConfig} defaultTheme='light'>
-      <Stack screenOptions={{ headerShown: false }}>
-        <Stack.Screen name="index" options={{ headerShown: false }} />
-      </Stack>
-    </TamaguiProvider>
+    <SafeAreaProvider>
+      <TamaguiProvider config={tamaguiConfig} defaultTheme='light'>
+        <Stack screenOptions={{ headerShown: false }}>
+          <Stack.Screen name="index" options={{ headerShown: false }} />
+        </Stack>
+      </TamaguiProvider>
+    </SafeAreaProvider>
   );
 }

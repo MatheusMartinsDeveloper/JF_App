@@ -1,12 +1,12 @@
 import { Card, YStack, XStack, Text, Image, Button } from "tamagui";
 import { LinearGradient } from "tamagui/linear-gradient";
-import { Link } from "expo-router";
+import { Link, useLocalSearchParams } from "expo-router";
 import { ProductsType } from "@/types/ProductsType";
 import { Plus } from "@tamagui/lucide-icons";
 
-export default function ProductCard({ image, name, price }: any) {
+export default function ProductCard({ id, image, name, price }: any) {
     return (
-        <Link href={"/"} asChild>
+        <Link href={`/menu/details/${id}`} asChild>
             <Card
                 width={"48%"}
                 height={190}

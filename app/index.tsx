@@ -14,11 +14,8 @@ export default function Login() {
                 gap={20}
             >
                 <Stack
-                    bg={"$background"}
-                    borderTopLeftRadius={"$round"}
-                    borderTopRightRadius={"$round"}
-                    borderBottomLeftRadius={"$round"}
-                    borderBottomRightRadius={"$round"}
+                    bg={"$color.background"}
+                    borderRadius={"$round"}
                     p={15}
                 >
                     <Image 
