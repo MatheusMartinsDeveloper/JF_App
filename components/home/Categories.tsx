@@ -42,14 +42,14 @@ export default function Categories() {
                         image={"sobremesas"}
                         title="Sobremesas"
                         imageWidth={100}
-                        imageHeight={60}
+                        imageHeight={70}
                     />
                     <Category 
                         bgColor="$backgroundCard4"
                         image={"refrigerantes"}
                         title="Bebidas"
                         imageWidth={100}
-                        imageHeight={70}
+                        imageHeight={90}
                     />
                 </XStack>
             </YStack>

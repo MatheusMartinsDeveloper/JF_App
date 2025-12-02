@@ -14,7 +14,7 @@ export default function Promotion() {
                     gap={15}
                 >
                     <Image
-                        source={require("../../assets/images/categories/hamburguer_photo.png")}
+                        source={require("../../assets/images/categories/card/snacks/snack_1.png")}
                         width={60}
                         height={60}
                         borderRadius={"$round"}

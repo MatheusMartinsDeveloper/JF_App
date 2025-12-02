@@ -4,7 +4,7 @@ import { Link, useLocalSearchParams } from "expo-router";
 import { ProductsType } from "@/types/ProductsType";
 import { Plus } from "@tamagui/lucide-icons";
 
-export default function ProductCard({ id, image, name, price }: any) {
+export default function ProductCard({ id, image, imageWidht, imageHeight, name, price }: any) {
     return (
         <Link href={`/menu/details/${id}`} asChild>
             <Card
@@ -42,6 +42,8 @@ export default function ProductCard({ id, image, name, price }: any) {
                             color={"$color.gray900"}
                             fontFamily={"$heading"}
                             fontWeight={"$3"}
+                            numberOfLines={1}
+                            ellipsizeMode="tail"
                         >{name}</Text>
                     </YStack>
                     <XStack

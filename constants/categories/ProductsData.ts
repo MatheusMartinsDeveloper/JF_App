@@ -110,7 +110,7 @@ export const ProductsData = [
         products: [
             {
                 id: 1,
-                imageCard: require("../../assets/images/categories/card/canvas.png"),
+                imageCard: require("../../assets/images/categories/card/portions/portion_1.png"),
                 imagesDetails: [
                     {
                         id: 1,
@@ -125,7 +125,7 @@ export const ProductsData = [
             },
             {
                 id: 2,
-                imageCard: require("../../assets/images/categories/card/canvas.png"),
+                imageCard: require("../../assets/images/categories/card/portions/portion_2.png"),
                 imagesDetails: [
                     {
                         id: 1,
@@ -140,7 +140,7 @@ export const ProductsData = [
             },
             {
                 id: 3,
-                imageCard: require("../../assets/images/categories/card/canvas.png"),
+                imageCard: require("../../assets/images/categories/card/portions/portion_3.png"),
                 imagesDetails: [
                     {
                         id: 1,
@@ -155,7 +155,7 @@ export const ProductsData = [
             },
             {
                 id: 4,
-                imageCard: require("../../assets/images/categories/card/canvas.png"),
+                imageCard: require("../../assets/images/categories/card/portions/portion_4.png"),
                 imagesDetails: [
                     {
                         id: 1,
@@ -170,7 +170,7 @@ export const ProductsData = [
             },
             {
                 id: 5,
-                imageCard: require("../../assets/images/categories/card/canvas.png"),
+                imageCard: require("../../assets/images/categories/card/portions/portion_5.png"),
                 imagesDetails: [
                     {
                         id: 1,
@@ -185,7 +185,7 @@ export const ProductsData = [
             },
             {
                 id: 6,
-                imageCard: require("../../assets/images/categories/card/canvas.png"),
+                imageCard: require("../../assets/images/categories/card/portions/portion_6.png"),
                 imagesDetails: [
                     {
                         id: 1,
@@ -210,7 +210,7 @@ export const ProductsData = [
         products: [
             {
                 id: 1,
-                imageCard: require("../../assets/images/categories/card/canvas.png"),
+                imageCard: require("../../assets/images/categories/card/desserts/dessert_1.png"),
                 imagesDetails: [
                     {
                         id: 1,
@@ -225,7 +225,7 @@ export const ProductsData = [
             },
             {
                 id: 2,
-                imageCard: require("../../assets/images/categories/card/canvas.png"),
+                imageCard: require("../../assets/images/categories/card/desserts/dessert_2.png"),
                 imagesDetails: [
                     {
                         id: 1,
@@ -240,7 +240,7 @@ export const ProductsData = [
             },
             {
                 id: 3,
-                imageCard: require("../../assets/images/categories/card/canvas.png"),
+                imageCard: require("../../assets/images/categories/card/desserts/dessert_3.png"),
                 imagesDetails: [
                     {
                         id: 1,
@@ -255,7 +255,7 @@ export const ProductsData = [
             },
             {
                 id: 4,
-                imageCard: require("../../assets/images/categories/card/canvas.png"),
+                imageCard: require("../../assets/images/categories/card/desserts/dessert_4.png"),
                 imagesDetails: [
                     {
                         id: 1,
@@ -280,7 +280,7 @@ export const ProductsData = [
         products: [
             {
                 id: 1,
-                imageCard: require("../../assets/images/categories/card/canvas.png"),
+                imageCard: require("../../assets/images/categories/card/sodas/soda_1.png"),
                 imagesDetails: [
                     {
                         id: 1,
@@ -295,7 +295,7 @@ export const ProductsData = [
             },
             {
                 id: 2,
-                imageCard: require("../../assets/images/categories/card/canvas.png"),
+                imageCard: require("../../assets/images/categories/card/sodas/soda_2.png"),
                 imagesDetails: [
                     {
                         id: 1,
@@ -310,7 +310,7 @@ export const ProductsData = [
             },
             {
                 id: 3,
-                imageCard: require("../../assets/images/categories/card/canvas.png"),
+                imageCard: require("../../assets/images/categories/card/sodas/soda_3.png"),
                 imagesDetails: [
                     {
                         id: 1,
@@ -325,7 +325,7 @@ export const ProductsData = [
             },
             {
                 id: 4,
-                imageCard: require("../../assets/images/categories/card/canvas.png"),
+                imageCard: require("../../assets/images/categories/card/sodas/soda_4.png"),
                 imagesDetails: [
                     {
                         id: 1,
@@ -340,7 +340,7 @@ export const ProductsData = [
             },
             {
                 id: 5,
-                imageCard: require("../../assets/images/categories/card/canvas.png"),
+                imageCard: require("../../assets/images/categories/card/sodas/soda_5.png"),
                 imagesDetails: [
                     {
                         id: 1,
@@ -355,7 +355,7 @@ export const ProductsData = [
             },
             {
                 id: 6,
-                imageCard: require("../../assets/images/categories/card/canvas.png"),
+                imageCard: require("../../assets/images/categories/card/sodas/soda_6.png"),
                 imagesDetails: [
                     {
                         id: 1,
@@ -380,7 +380,7 @@ export const ProductsData = [
         products: [
             {
                 id: 1,
-                imageCard: require("../../assets/images/categories/card/canvas.png"),
+                imageCard: require("../../assets/images/categories/card/potato_pot/potato_pot_1.png"),
                 imagesDetails: [
                     {
                         id: 1,
@@ -395,7 +395,7 @@ export const ProductsData = [
             },
             {
                 id: 2,
-                imageCard: require("../../assets/images/categories/card/canvas.png"),
+                imageCard: require("../../assets/images/categories/card/potato_pot/potato_pot_2.png"),
                 imagesDetails: [
                     {
                         id: 1,
@@ -410,7 +410,7 @@ export const ProductsData = [
             },
             {
                 id: 3,
-                imageCard: require("../../assets/images/categories/card/canvas.png"),
+                imageCard: require("../../assets/images/categories/card/potato_pot/potato_pot_3.png"),
                 imagesDetails: [
                     {
                         id: 1,
@@ -425,7 +425,7 @@ export const ProductsData = [
             },
             {
                 id: 4,
-                imageCard: require("../../assets/images/categories/card/canvas.png"),
+                imageCard: require("../../assets/images/categories/card/potato_pot/potato_pot_4.png"),
                 imagesDetails: [
                     {
                         id: 1,
@@ -450,7 +450,7 @@ export const ProductsData = [
         products: [
             {
                 id: 1,
-                imageCard: require("../../assets/images/categories/card/canvas.png"),
+                imageCard: require("../../assets/images/categories/card/broths/broths_1.png"),
                 imagesDetails: [
                     {
                         id: 1,
@@ -465,7 +465,7 @@ export const ProductsData = [
             },
             {
                 id: 2,
-                imageCard: require("../../assets/images/categories/card/canvas.png"),
+                imageCard: require("../../assets/images/categories/card/broths/broths_2.png"),
                 imagesDetails: [
                     {
                         id: 1,
@@ -480,7 +480,7 @@ export const ProductsData = [
             },
             {
                 id: 3,
-                imageCard: require("../../assets/images/categories/card/canvas.png"),
+                imageCard: require("../../assets/images/categories/card/broths/broths_3.png"),
                 imagesDetails: [
                     {
                         id: 1,
@@ -495,7 +495,7 @@ export const ProductsData = [
             },
             {
                 id: 4,
-                imageCard: require("../../assets/images/categories/card/canvas.png"),
+                imageCard: require("../../assets/images/categories/card/broths/broths_4.png"),
                 imagesDetails: [
                     {
                         id: 1,
@@ -520,7 +520,7 @@ export const ProductsData = [
         products: [
             {
                 id: 1,
-                imageCard: require("../../assets/images/categories/card/canvas.png"),
+                imageCard: require("../../assets/images/categories/card/juices/juice_1.png"),
                 imagesDetails: [
                     {
                         id: 1,
@@ -535,7 +535,7 @@ export const ProductsData = [
             },
             {
                 id: 2,
-                imageCard: require("../../assets/images/categories/card/canvas.png"),
+                imageCard: require("../../assets/images/categories/card/juices/juice_2.png"),
                 imagesDetails: [
                     {
                         id: 1,
@@ -550,7 +550,7 @@ export const ProductsData = [
             },
             {
                 id: 3,
-                imageCard: require("../../assets/images/categories/card/canvas.png"),
+                imageCard: require("../../assets/images/categories/card/juices/juice_3.png"),
                 imagesDetails: [
                     {
                         id: 1,
@@ -565,7 +565,7 @@ export const ProductsData = [
             },
             {
                 id: 4,
-                imageCard: require("../../assets/images/categories/card/canvas.png"),
+                imageCard: require("../../assets/images/categories/card/juices/juice_4.png"),
                 imagesDetails: [
                     {
                         id: 1,
@@ -590,7 +590,7 @@ export const ProductsData = [
         products: [
             {
                 id: 1,
-                imageCard: require("../../assets/images/categories/card/canvas.png"),
+                imageCard: require("../../assets/images/categories/card/chips/chip_1.png"),
                 imagesDetails: [
                     {
                         id: 1,
@@ -605,7 +605,7 @@ export const ProductsData = [
             },
             {
                 id: 2,
-                imageCard: require("../../assets/images/categories/card/canvas.png"),
+                imageCard: require("../../assets/images/categories/card/chips/chip_2.png"),
                 imagesDetails: [
                     {
                         id: 1,
@@ -620,7 +620,7 @@ export const ProductsData = [
             },
             {
                 id: 3,
-                imageCard: require("../../assets/images/categories/card/canvas.png"),
+                imageCard: require("../../assets/images/categories/card/chips/chip_3.png"),
                 imagesDetails: [
                     {
                         id: 1,
@@ -635,7 +635,7 @@ export const ProductsData = [
             },
             {
                 id: 4,
-                imageCard: require("../../assets/images/categories/card/canvas.png"),
+                imageCard: require("../../assets/images/categories/card/chips/chip_4.png"),
                 imagesDetails: [
                     {
                         id: 1,
@@ -660,7 +660,7 @@ export const ProductsData = [
         products: [
             {
                 id: 1,
-                imageCard: require("../../assets/images/categories/card/canvas.png"),
+                imageCard: require("../../assets/images/categories/card/beer/beer_1.png"),
                 imagesDetails: [
                     {
                         id: 1,
@@ -675,7 +675,7 @@ export const ProductsData = [
             },
             {
                 id: 2,
-                imageCard: require("../../assets/images/categories/card/canvas.png"),
+                imageCard: require("../../assets/images/categories/card/beer/beer_2.png"),
                 imagesDetails: [
                     {
                         id: 1,
@@ -690,7 +690,7 @@ export const ProductsData = [
             },
             {
                 id: 3,
-                imageCard: require("../../assets/images/categories/card/canvas.png"),
+                imageCard: require("../../assets/images/categories/card/beer/beer_3.png"),
                 imagesDetails: [
                     {
                         id: 1,
@@ -705,14 +705,14 @@ export const ProductsData = [
             },
             {
                 id: 4,
-                imageCard: require("../../assets/images/categories/card/canvas.png"),
+                imageCard: require("../../assets/images/categories/card/beer/beer_4.png"),
                 imagesDetails: [
                     {
                         id: 1,
                         image: require("../../assets/images/categories/snacks/snack_1.png")
                     }
                 ],
-                name: "Skok 350ML",
+                name: "Skol 350ML",
                 description: "Pão, Presunto, Mussarela, Hamburguer 120gr, ketchup e maionese",
                 note: 4.7,
                 time: "20min",
@@ -730,7 +730,7 @@ export const ProductsData = [
         products: [
             {
                 id: 1,
-                imageCard: require("../../assets/images/categories/card/canvas.png"),
+                imageCard: require("../../assets/images/categories/card/distilled_wine/distilled_wine_1.png"),
                 imagesDetails: [
                     {
                         id: 1,
@@ -745,7 +745,7 @@ export const ProductsData = [
             },
             {
                 id: 2,
-                imageCard: require("../../assets/images/categories/card/canvas.png"),
+                imageCard: require("../../assets/images/categories/card/distilled_wine/distilled_wine_2.png"),
                 imagesDetails: [
                     {
                         id: 1,
@@ -760,7 +760,7 @@ export const ProductsData = [
             },
             {
                 id: 3,
-                imageCard: require("../../assets/images/categories/card/canvas.png"),
+                imageCard: require("../../assets/images/categories/card/distilled_wine/distilled_wine_3.png"),
                 imagesDetails: [
                     {
                         id: 1,
@@ -775,7 +775,7 @@ export const ProductsData = [
             },
             {
                 id: 4,
-                imageCard: require("../../assets/images/categories/card/canvas.png"),
+                imageCard: require("../../assets/images/categories/card/distilled_wine/distilled_wine_4.png"),
                 imagesDetails: [
                     {
                         id: 1,

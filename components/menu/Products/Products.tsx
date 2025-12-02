@@ -29,6 +29,8 @@ export default function Products({ category }: any) {
                                 key={item.id}
                                 id={item.id}
                                 image={item.imageCard}
+                                imageWidht={item.imageWidht}
+                                imageHeight={item.imageHeight}
                                 name={item.name}
                                 price={item.price}
                             />
